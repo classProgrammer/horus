@@ -1,0 +1,67 @@
+intents:
+  - greet
+  - goodbye
+  - sickness
+  - fetch_sickness_data:
+      use_entities: []
+
+entities:
+  - name
+  - dob
+
+
+slots:
+  name:
+    type: unfeaturized
+    auto_fill: false    
+  dob:
+    type: unfeaturized
+    auto_fill: false    
+
+templates:
+  utter_ask_name:
+    - text: "Ich benötige deinen Namen um die Krankmeldung durchzuführen"
+    - text: "Bitte gib mir deinen Namen um die Krankmeldung durchzuführen"
+    - text: "Zur Durchführung brauche ich bitte deinen Namen"
+
+  utter_ask_dob:
+    - text: "Ich brauche noch dein Geburtsdatum"
+    - text: "Zur Bearbeitung brauche ich noch dein Geburtsdatum"
+
+  utter_greet:
+    - text: "Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?"
+    - text: "Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?"
+    - text: "Hallo, wie kann ich helfen?"
+    - text: "Ich bin der 3BIT Chatbot, wie kann ich helfen?"
+    - text: "Ich bin der 3BIT Chatbot, wie darf ich behilflich sein?"
+  utter_goodbye:
+    - text: "Guten Tag"
+    - text: "Ich hoffe ich konnte behilflich sein"
+    - text: "Auf Wiedersehen"
+    - text: "Bye"
+    - text: "Danke für Ihre Geduld"
+    - text: "Danke für Ihre Kooperation"
+  utter_get_well_soon:
+    - text: "Gute Besserung"
+    - text: "Ich hoffe es geht Ihnen bald Besser"
+    - text: "Gute Genesung"
+    - text: "Das ist schade, gute Besserung"
+    - text: "Ich hoffe dir geht es bald besser"
+  utter_get_well_soon_with_name:
+    - text: "Gute Besserung {name}"
+    - text: "Gute Genesung {name}"
+    - text: "Das ist schade, gute Besserung {name}"
+    - text: "Ich hoffe dir geht es bald besser {name}"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_get_well_soon
+  - utter_get_well_soon_with_name
+  - utter_ask_name
+  - utter_ask_dob
+
+
+
+forms:
+  - sickness_form

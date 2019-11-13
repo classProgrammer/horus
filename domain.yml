@@ -60,8 +60,7 @@ actions:
   - utter_get_well_soon_with_name
   - utter_ask_name
   - utter_ask_dob
-
-
+  - action_restart
 
 forms:
   - sickness_form

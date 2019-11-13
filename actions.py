@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
 from typing import Dict, Text, Any, List, Union, Optional
 
-from rasa_sdk import Tracker
+from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
+from rasa_sdk.events import Restarted # to restart the bot after successfull conversation
+
+class RestartAction(Action):
+    def name(self):
+        return "action_restart" # include action in domain file
+
+    def run(self, dispatcher, tracker, domain):
+        return [Restarted()]
 
 
 class SicknessForm(FormAction):

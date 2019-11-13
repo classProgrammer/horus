@@ -2,9 +2,8 @@
 # https://rasa.com/docs/rasa/nlu/components/
 language: de
 
-#pipeline: supervised_embeddings # high amount of data = supervised embeddings
-
-pipeline: "pretrained_embeddings_spacy" # low amount of test data = use pretrained model
+pipeline: supervised_embeddings # high amount of data = supervised embeddings
+#pipeline: "pretrained_embeddings_spacy" # low amount of test data = use pretrained model
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

@@ -38,38 +38,12 @@
 - Guten Tag
 
 ## intent:fetch_sickness_data
-- Ich bin krank
-- Mir geht es nicht gut
-- Ich fühle mich nicht besonders
-- Ich kann heute nicht zur Arbeit gehen
-- Ich [Hans Wurst](name) bin heute krank
-- Ich [Anna Nass](name) komme heute nicht in die Arbeit
-- [Luke Skywalker](name) ist heute krank
-- Mir ist furchtbar übel
-- Ich bin krank
-- Ich bin heute unpässlich
-- Heute bin ich, [Hans Solo](name) krank
-- Ich komme heute nicht
-- Krankmeldung für [Müller Maria](name)
-- Ich komme heute nicht zur Arbeit
-- Bitte melde [Rainer Maria](name) krank
-- Ich [Julian Baumgartner](name) komme heute nicht denn ich habe Kopfschmerzen
-- Heute bin ich nicht da
-- Heute bin ich krank
-- [Scarlet Johansson](name) ist krank gemeldet 
-- Ich habe Kopfschmerzen
-- Ich heiße [Ozzy Osbourne](name)
-- [Viola Superstar](name)
-- Ich bin [Hans Kanns](name)
-- Mein Name ist[Luna Mond](name)
-- [Yoda Starwars](name)
-- [Padme Skywalker](name)
-- Melde [Viola Superstar](name) krank
-- Melde [Sue Heck](name) bitte krank
-- Mein Geburtsdatum ist der[31.08.1993](dob)
-- [01.01.2000](dob)
-- Ich [Hans Wurst](name) geboren am [20.04.1967](dob) bin krank
-- [12.05.1986](dob)
-- [05.03.1999](dob)
-- [07.09.1958](dob)
-
+- [Hans Wurst](name), [12.05.1986](dob)
+- Ich bin [Anna Nass](name) geboren am [07.09.1958](dob)
+- [Luke Skywalker](name) [07.09.1958](dob)
+- [Rainer Maria](name): [05.03.1999](dob)
+- [Stefani Alexander](name) : [31.08.1993](dob)
+- [Hans Solo](name) :[01.01.2000](dob)
+- [Maria Müller](name), [22.04.1977](dob)
+- [Yoda Starwars](name) [30.03.1997](dob)
+- [Ozzy Osbourne](name) [24.06.1994](dob)

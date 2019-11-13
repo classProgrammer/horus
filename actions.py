@@ -6,14 +6,6 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import Restarted # to restart the bot after successfull conversation
 
-class RestartAction(Action):
-    def name(self):
-        return "action_restart" # include action in domain file
-
-    def run(self, dispatcher, tracker, domain):
-        return [Restarted()]
-
-
 class SicknessForm(FormAction):
 
     def name(self) -> Text:
@@ -24,9 +16,8 @@ class SicknessForm(FormAction):
         return ["name", "dob"]
 
     # def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-    #     return {
-    #         "name": self.from_entity(entity="name"),
-    #     }
+    #     return { "name": self.from_entity(entity="name"), 
+    #              "dob": self.from_entity(entity="dob")}
 
 
     # @staticmethod
@@ -65,8 +56,22 @@ class SicknessForm(FormAction):
         """Define what the form has to do
             after all required slots are filled"""
 
-        print("IN SUBMIT")
-
         # utter submit template
         #dispatcher.utter_template("confirm", tracker)
         return []
+
+class WelcomeAction(Action):
+    def name(self):
+        return "action_welcome" # include action in domain file
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_greet", tracker)
+        return []
+
+
+class RestartAction(Action):
+    def name(self):
+        return "action_restart" # include action in domain file
+
+    def run(self, dispatcher, tracker, domain):
+        return [Restarted()]

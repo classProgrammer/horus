@@ -28,12 +28,16 @@ templates:
     - text: "Ich brauche noch dein Geburtsdatum"
     - text: "Zur Bearbeitung brauche ich noch dein Geburtsdatum"
 
+  utter_sad_to_hear:
+    - text: "Bitte gib mir deinen Namen und dein Geburtsdatum im Format [VORNAME NACHNAME, DD.MM.YYYY] für die Krankmeldung"
+ 
   utter_greet:
     - text: "Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?"
     - text: "Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?"
     - text: "Hallo, wie kann ich helfen?"
     - text: "Ich bin der 3BIT Chatbot, wie kann ich helfen?"
     - text: "Ich bin der 3BIT Chatbot, wie darf ich behilflich sein?"
+
   utter_goodbye:
     - text: "Guten Tag"
     - text: "Ich hoffe ich konnte behilflich sein"
@@ -41,17 +45,19 @@ templates:
     - text: "Bye"
     - text: "Danke für Ihre Geduld"
     - text: "Danke für Ihre Kooperation"
+
   utter_get_well_soon:
     - text: "Gute Besserung"
     - text: "Ich hoffe es geht Ihnen bald Besser"
     - text: "Gute Genesung"
     - text: "Das ist schade, gute Besserung"
     - text: "Ich hoffe dir geht es bald besser"
+
   utter_get_well_soon_with_name:
-    - text: "Gute Besserung {name}"
-    - text: "Gute Genesung {name}"
-    - text: "Das ist schade, gute Besserung {name}"
-    - text: "Ich hoffe dir geht es bald besser {name}"
+    - text: "Gute Besserung {name}, {dob}"
+    - text: "Gute Genesung {name}, {dob}"
+    - text: "Das ist schade, gute Besserung {name}, {dob}"
+    - text: "Ich hoffe dir geht es bald besser {name}, {dob}"
 
 actions:
   - utter_greet
@@ -61,6 +67,7 @@ actions:
   - utter_ask_name
   - utter_ask_dob
   - action_restart
+  - utter_sad_to_hear
 
 forms:
   - sickness_form

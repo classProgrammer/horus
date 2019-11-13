@@ -14,11 +14,15 @@
 * goodbye
     - utter_goodbye -->
 
+## happy, holiday
+* greet
+    - utter_greet
+* holiday
 ## happy, sickness
 * greet
     - utter_greet
 * sickness
-    - utter_sad_to_hear
+    - utter_authorize
 * fetch_sickness_data
     - sickness_form
     - form{"name": "sickness_form"}
@@ -28,9 +32,9 @@
     - utter_goodbye
     - action_restart
 
-## happy, fetch users name, no intro
+## happy, sickness fetch users name, no intro
 * sickness
-    - utter_sad_to_hear
+    - utter_authorize
 * fetch_sickness_data
     - sickness_form
     - form{"name": "sickness_form"}

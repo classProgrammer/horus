@@ -2,19 +2,22 @@ intents:
   - greet
   - goodbye
   - sickness
+  - holiday
+  - fetch_holiday_data:
+      use_entities: []
   - fetch_sickness_data:
       use_entities: []
 
 entities:
   - name
-  - dob
+  - date
 
 
 slots:
   name:
     type: unfeaturized
     auto_fill: false    
-  dob:
+  date:
     type: unfeaturized
     auto_fill: false    
 
@@ -27,10 +30,12 @@ templates:
   utter_ask_dob:
     - text: "Ich brauche noch dein Geburtsdatum"
     - text: "Zur Bearbeitung brauche ich noch dein Geburtsdatum"
-
-  utter_sad_to_hear:
+  utter_authorize:
     - text: "Bitte gib mir deinen Namen und dein Geburtsdatum im Format [VORNAME NACHNAME, DD.MM.YYYY] für die Krankmeldung"
- 
+    
+  utter_happy_holidays:
+    - text: "Ich wünsche einen schönen Urlaub"
+
   utter_greet:
     - text: "Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?"
     - text: "Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?"
@@ -54,10 +59,10 @@ templates:
     - text: "Ich hoffe dir geht es bald besser"
 
   utter_get_well_soon_with_name:
-    - text: "Gute Besserung {name}, {dob}"
-    - text: "Gute Genesung {name}, {dob}"
-    - text: "Das ist schade, gute Besserung {name}, {dob}"
-    - text: "Ich hoffe dir geht es bald besser {name}, {dob}"
+    - text: "Gute Besserung {name}, {date}"
+    - text: "Gute Genesung {name}, {date}"
+    - text: "Das ist schade, gute Besserung {name}, {date}"
+    - text: "Ich hoffe dir geht es bald besser {name}, {date}"
 
 actions:
   - utter_greet
@@ -67,7 +72,8 @@ actions:
   - utter_ask_name
   - utter_ask_dob
   - action_restart
-  - utter_sad_to_hear
+  - utter_authorize
+  - utter_happy_holidays
 
 forms:
   - sickness_form

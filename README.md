@@ -24,5 +24,24 @@ shell@something/.../horus> rasa run actions
 shell@something/.../horus> rasa shell
 ```
 
+### Starten von Rasa-X (Browser Umgebung)
+```shell
+shell@something/.../horus> rasa x
+```
+
+### Rasa als lokalen HTTP Server verwenden
+```shell
+shell@something/.../horus> rasa run --enable-api --cors "*"
+```
+Erreichbar unter http://localhost:5005/webhooks/rest/webhook
+
+Request Body:
+```json
+{
+  "sender": "other",
+  "message": "hallo"
+}
+```
+
 ## Referenzen
 - [Rasa Dokumentation](https://rasa.com/docs/)

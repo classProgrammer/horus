@@ -1,3 +1,27 @@
+## intent:fetch_sickness_data
+- [Hans Wurst](name), [12.05.1986](dob)
+- Ich bin [Anna Nass](name) geboren am [07.09.1958](dob)
+- [Luke Skywalker](name) [07.09.1958](dob)
+- [Rainer Maria](name): [05.03.1999](dob)
+- [Stefani Alexander](name) : [31.08.1993](dob)
+- [Hans Solo](name) :[01.01.2000](dob)
+- [Maria Müller](name), [22.04.1977](dob)
+- [Yoda Starwars](name) [30.03.1997](dob)
+- [Ozzy Osbourne](name) [24.06.1994](dob)
+- [Hans Wurst](name) [27.04.1997](dob)
+
+## intent:goodbye
+- tschau
+- Auf Wiedersehen
+- tschüss
+- tschüs
+- bye
+- danke
+- ende
+- servus
+- servas
+- Guten Tag
+
 ## intent:greet
 - Hi
 - Hey
@@ -10,6 +34,16 @@
 - Ich brauche Hilfe
 - Hi bot
 - Hey bot
+- hi
+
+## intent:holiday
+- Ich brauche Urlaub
+- urlaub
+- Urlaub
+- Ich will Urlaub beantragen
+- Ich will Urlaub
+- Ich benötige Uralaub
+- Urlaubsantrag
 
 ## intent:sickness
 - Ich bin krank
@@ -24,37 +58,4 @@
 - Heute bin ich nicht da
 - Heute bin ich krank
 - Ich kann heute nicht zur Arbeit gehen
-
-## intent:holiday
-- Ich brauche Urlaub
-- urlaub
-- Urlaub
-- Ich will Urlaub beantragen
-- Ich will Urlaub
-- Ich benötige Uralaub
-- Urlaubsantrag
-
-## intent:fetch_holiday_data
-
-## intent:goodbye
-- tschau
-- Auf Wiedersehen
-- tschüss
-- tschüs
-- bye
-- danke
-- ende
-- servus
-- servas
-- Guten Tag
-
-## intent:fetch_sickness_data
-- [Hans Wurst](name), [12.05.1986](dob)
-- Ich bin [Anna Nass](name) geboren am [07.09.1958](dob)
-- [Luke Skywalker](name) [07.09.1958](dob)
-- [Rainer Maria](name): [05.03.1999](dob)
-- [Stefani Alexander](name) : [31.08.1993](dob)
-- [Hans Solo](name) :[01.01.2000](dob)
-- [Maria Müller](name), [22.04.1977](dob)
-- [Yoda Starwars](name) [30.03.1997](dob)
-- [Ozzy Osbourne](name) [24.06.1994](dob)
+- ich bin krank

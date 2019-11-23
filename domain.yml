@@ -1,79 +1,68 @@
 intents:
-  - greet
-  - goodbye
-  - sickness
-  - holiday
-  - fetch_holiday_data:
-      use_entities: []
-  - fetch_sickness_data:
-      use_entities: []
-
+- greet
+- goodbye
+- sickness
+- holiday
+- fetch_holiday_data:
+    use_entities: []
+- fetch_sickness_data:
+    use_entities: []
 entities:
-  - name
-  - dob
-
-
+- name
+- dob
 slots:
-  name:
-    type: unfeaturized
-    auto_fill: false    
   dob:
     type: unfeaturized
-    auto_fill: false    
-
+    auto_fill: false
+  name:
+    type: unfeaturized
+    auto_fill: false
 templates:
   utter_ask_name:
-    - text: "Ich benötige deinen Namen um die Krankmeldung durchzuführen"
-    - text: "Bitte gib mir deinen Namen um die Krankmeldung durchzuführen"
-    - text: "Zur Durchführung brauche ich bitte deinen Namen"
-
+  - text: Ich benötige deinen Namen um die Krankmeldung durchzuführen
+  - text: Bitte gib mir deinen Namen um die Krankmeldung durchzuführen
+  - text: Zur Durchführung brauche ich bitte deinen Namen
   utter_ask_dob:
-    - text: "Ich brauche noch dein Geburtsdatum"
-    - text: "Zur Bearbeitung brauche ich noch dein Geburtsdatum"
+  - text: Ich brauche noch dein Geburtsdatum
+  - text: Zur Bearbeitung brauche ich noch dein Geburtsdatum
   utter_authorize:
-    - text: "Bitte gib mir deinen Namen und dein Geburtsdatum im Format [VORNAME NACHNAME, DD.MM.YYYY] für die Krankmeldung"
-    
+  - text: Bitte gib mir deinen Namen und dein Geburtsdatum im Format [VORNAME NACHNAME,
+      DD.MM.YYYY] für die Krankmeldung
   utter_happy_holidays:
-    - text: "Ich wünsche einen schönen Urlaub"
-
+  - text: Ich wünsche einen schönen Urlaub
   utter_greet:
-    - text: "Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?"
-    - text: "Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?"
-    - text: "Hallo, wie kann ich helfen?"
-    - text: "Ich bin der 3BIT Chatbot, wie kann ich helfen?"
-    - text: "Ich bin der 3BIT Chatbot, wie darf ich behilflich sein?"
-
+  - text: Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?
+  - text: Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?
+  - text: Hallo, wie kann ich helfen?
+  - text: Ich bin der 3BIT Chatbot, wie kann ich helfen?
+  - text: Ich bin der 3BIT Chatbot, wie darf ich behilflich sein?
   utter_goodbye:
-    - text: "Guten Tag"
-    - text: "Ich hoffe ich konnte behilflich sein"
-    - text: "Auf Wiedersehen"
-    - text: "Bye"
-    - text: "Danke für Ihre Geduld"
-    - text: "Danke für Ihre Kooperation"
-
+  - text: Guten Tag
+  - text: Ich hoffe ich konnte behilflich sein
+  - text: Auf Wiedersehen
+  - text: Bye
+  - text: Danke für Ihre Geduld
+  - text: Danke für Ihre Kooperation
   utter_get_well_soon:
-    - text: "Gute Besserung"
-    - text: "Ich hoffe es geht Ihnen bald Besser"
-    - text: "Gute Genesung"
-    - text: "Das ist schade, gute Besserung"
-    - text: "Ich hoffe dir geht es bald besser"
-
+  - text: Gute Besserung
+  - text: Ich hoffe es geht Ihnen bald Besser
+  - text: Gute Genesung
+  - text: Das ist schade, gute Besserung
+  - text: Ich hoffe dir geht es bald besser
   utter_get_well_soon_with_name:
-    - text: "Gute Besserung {name}, {dob}"
-    - text: "Gute Genesung {name}, {dob}"
-    - text: "Das ist schade, gute Besserung {name}, {dob}"
-    - text: "Ich hoffe dir geht es bald besser {name}, {dob}"
-
+  - text: Gute Besserung {name}, {dob}
+  - text: Gute Genesung {name}, {dob}
+  - text: Das ist schade, gute Besserung {name}, {dob}
+  - text: Ich hoffe dir geht es bald besser {name}, {dob}
 actions:
-  - utter_greet
-  - utter_goodbye
-  - utter_get_well_soon
-  - utter_get_well_soon_with_name
-  - utter_ask_name
-  - utter_ask_dob
-  - action_restart
-  - utter_authorize
-  - utter_happy_holidays
-
+- utter_greet
+- utter_goodbye
+- utter_get_well_soon
+- utter_get_well_soon_with_name
+- utter_ask_name
+- utter_ask_dob
+- action_restart
+- utter_authorize
+- utter_happy_holidays
 forms:
-  - sickness_form
+- sickness_form

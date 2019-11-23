@@ -3,7 +3,7 @@ from typing import Dict, Text, Any, List, Union, Optional
 
 from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction
+from rasa_sdk.forms import FormAction, SlotSet
 from rasa_sdk.events import Restarted # to restart the bot after successfull conversation
 
 import requests
@@ -70,12 +70,19 @@ class SicknessForm(FormAction):
         headers = {'Content-type': 'application/json'}
         url = 'https://resteasy.azurewebsites.net/authenticate'
         response = requests.post(url, data=data, headers=headers)
-
         print(response)
+
+        if (response.ok):
+            return []
+
+        dispatcher.utter_message("Die eingegebenen Inromationen sind nicht korrekt")
+
+        #dispatcher.utter_template("utter_authorize", tracker)
+        return []
+
 
         # utter submit template
         #dispatcher.utter_template("confirm", tracker)
-        return []
 
 class WelcomeAction(Action):
     def name(self):

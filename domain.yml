@@ -10,14 +10,14 @@ intents:
 
 entities:
   - name
-  - date
+  - dob
 
 
 slots:
   name:
     type: unfeaturized
     auto_fill: false    
-  date:
+  dob:
     type: unfeaturized
     auto_fill: false    
 
@@ -59,10 +59,10 @@ templates:
     - text: "Ich hoffe dir geht es bald besser"
 
   utter_get_well_soon_with_name:
-    - text: "Gute Besserung {name}, {date}"
-    - text: "Gute Genesung {name}, {date}"
-    - text: "Das ist schade, gute Besserung {name}, {date}"
-    - text: "Ich hoffe dir geht es bald besser {name}, {date}"
+    - text: "Gute Besserung {name}, {dob}"
+    - text: "Gute Genesung {name}, {dob}"
+    - text: "Das ist schade, gute Besserung {name}, {dob}"
+    - text: "Ich hoffe dir geht es bald besser {name}, {dob}"
 
 actions:
   - utter_greet

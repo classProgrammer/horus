@@ -49,12 +49,12 @@
 - Guten Tag
 
 ## intent:fetch_sickness_data
-- [Hans Wurst](name), [12.05.1986](date)
-- Ich bin [Anna Nass](name) geboren am [07.09.1958](date)
-- [Luke Skywalker](name) [07.09.1958](date)
-- [Rainer Maria](name): [05.03.1999](date)
-- [Stefani Alexander](name) : [31.08.1993](date)
-- [Hans Solo](name) :[01.01.2000](date)
-- [Maria Müller](name), [22.04.1977](date)
-- [Yoda Starwars](name) [30.03.1997](date)
-- [Ozzy Osbourne](name) [24.06.1994](date)
+- [Hans Wurst](name), [12.05.1986](dob)
+- Ich bin [Anna Nass](name) geboren am [07.09.1958](dob)
+- [Luke Skywalker](name) [07.09.1958](dob)
+- [Rainer Maria](name): [05.03.1999](dob)
+- [Stefani Alexander](name) : [31.08.1993](dob)
+- [Hans Solo](name) :[01.01.2000](dob)
+- [Maria Müller](name), [22.04.1977](dob)
+- [Yoda Starwars](name) [30.03.1997](dob)
+- [Ozzy Osbourne](name) [24.06.1994](dob)

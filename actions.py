@@ -6,6 +6,10 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import Restarted # to restart the bot after successfull conversation
 
+import requests
+import json
+
+
 class SicknessForm(FormAction):
 
     def name(self) -> Text:
@@ -55,6 +59,19 @@ class SicknessForm(FormAction):
     ) -> List[Dict]:
         """Define what the form has to do
             after all required slots are filled"""
+
+        name = tracker.current_slot_values()["name"].lower()
+        dob = tracker.current_slot_values()["dob"]
+        data = json.dumps({
+            "name": name,
+            "dob": dob
+        })
+
+        headers = {'Content-type': 'application/json'}
+        url = 'https://resteasy.azurewebsites.net/authenticate'
+        response = requests.post(url, data=data, headers=headers)
+
+        print(response)
 
         # utter submit template
         #dispatcher.utter_template("confirm", tracker)

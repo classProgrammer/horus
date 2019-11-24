@@ -23,17 +23,6 @@ class SicknessForm(FormAction):
     #     return { "name": self.from_entity(entity="name"), 
     #              "dob": self.from_entity(entity="dob")}
 
-
-    # @staticmethod
-    # def is_int(string: Text) -> bool:
-    #     """Check if a string is an integer"""
-
-    #     try:
-    #         int(string)
-    #         return True
-    #     except ValueError:
-    #         return False
-
     def validate_name(
         self,
         value: Text,
@@ -68,21 +57,16 @@ class SicknessForm(FormAction):
         })
 
         headers = {'Content-type': 'application/json'}
-        url = 'https://resteasy.azurewebsites.net/authenticate'
+        url = 'https://resteasy.azurewebsites.net/sick'
         response = requests.post(url, data=data, headers=headers)
         print(response)
 
         if (response.ok):
+            dispatcher.utter_message("Informationen erfolgreich gespeichert")
             return []
 
-        dispatcher.utter_message("Die eingegebenen Inromationen sind nicht korrekt")
-
-        #dispatcher.utter_template("utter_authorize", tracker)
-        return []
-
-
-        # utter submit template
-        #dispatcher.utter_template("confirm", tracker)
+        dispatcher.utter_message("Die eingegebenen Inromationen sind nicht korrekt, Konversation wird zurückgesetzt")
+        return [Restarted()]
 
 class WelcomeAction(Action):
     def name(self):

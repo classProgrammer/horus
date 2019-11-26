@@ -6,18 +6,17 @@ services:
       - 80:5005
     volumes:
       - ${WEBAPP_STORAGE_HOME}:/app
-    restart: always
     command: >
       run 
       --enable-api
+      --endpoints endpoints.yml
     
   action_server:
     image: rasa/rasa-sdk:latest
-    restart: always
     volumes:
       - ${WEBAPP_STORAGE_HOME}:/app/actions
     command: >
       run
-      actions/actions
+      actions
   
   

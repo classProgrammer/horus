@@ -16,4 +16,8 @@ services:
     restart: always
     volumes:
       - ${WEBAPP_STORAGE_HOME}:/app/actions
+    command: >
+      run
+      actions/actions
+  
   

@@ -9,9 +9,7 @@ services:
     restart: always
     command: >
       run 
-      --enable-api
-      --endpoints endpoints.yml
-      --cors "*" 
+      #--enable-api
     
   action_server:
     image: rasa/rasa-sdk:latest

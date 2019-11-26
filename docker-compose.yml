@@ -3,7 +3,7 @@ services:
   rasa:
     image: rasa/rasa:latest
     ports:
-      - 5005:80
+      - 80:5005
     volumes:
       - ./:/app
     command: >
@@ -14,11 +14,6 @@ services:
     
   action_server:
     image: rasa/rasa-sdk:latest
-    ports:
-      - 5055:443
     volumes:
       - ./actions:/app/actions
-    # command: >
-    #   run
-    #   actions
   

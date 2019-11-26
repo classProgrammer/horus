@@ -9,7 +9,6 @@ services:
     restart: always
     command: >
       run 
-      #--enable-api
     
   action_server:
     image: rasa/rasa-sdk:latest

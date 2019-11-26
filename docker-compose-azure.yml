@@ -5,7 +5,7 @@ services:
     ports:
       - 80:5005
     volumes:
-      - ${WEBAPP_STORAGE_HOME}/application/rasa:/app
+      - ${WEBAPP_STORAGE_HOME}:/app
     restart: always
     command: >
       run 
@@ -17,5 +17,5 @@ services:
     image: rasa/rasa-sdk:latest
     restart: always
     volumes:
-      - ${WEBAPP_STORAGE_HOME}/application/rasa/actions:/app/actions
+      - ${WEBAPP_STORAGE_HOME}/actions:/app/actions
   

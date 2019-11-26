@@ -5,7 +5,8 @@ services:
     ports:
       - 80:5005
     volumes:
-      - ${HOME}/application/rasa:/app
+      - ${WEBAPP_STORAGE_HOME}/application/rasa:/app
+    restart: always
     command: >
       run 
       --enable-api
@@ -14,6 +15,7 @@ services:
     
   action_server:
     image: rasa/rasa-sdk:latest
+    restart: always
     volumes:
-      - ${HOME}/application/rasa/actions:/app/actions
+      - ${WEBAPP_STORAGE_HOME}/application/rasa/actions:/app/actions
   

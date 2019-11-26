@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:latest
+    ports:
+      - 80:5005
+    volumes:
+      - ${HOME}/application/rasa:/app
+    command: >
+      run 
+      --enable-api
+      --endpoints endpoints.yml
+      --cors "*" 
+    
+  action_server:
+    image: rasa/rasa-sdk:latest
+    volumes:
+      - ${HOME}/application/rasa/actions:/app/actions
+  

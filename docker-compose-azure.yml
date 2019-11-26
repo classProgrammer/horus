@@ -14,9 +14,5 @@ services:
   action_server:
     image: rasa/rasa-sdk:latest
     volumes:
-      - ${WEBAPP_STORAGE_HOME}:/app/actions
-    command: >
-      run
-      actions
-  
+      - ${WEBAPP_STORAGE_HOME}:/app/actions 
   

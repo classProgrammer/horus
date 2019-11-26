@@ -15,5 +15,5 @@ services:
     image: rasa/rasa-sdk:latest
     restart: always
     volumes:
-      - ${WEBAPP_STORAGE_HOME}/actions:/app/actions
+      - ${WEBAPP_STORAGE_HOME}:/app/actions
   

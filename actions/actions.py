@@ -23,6 +23,9 @@ class SicknessForm(FormAction):
     #     return { "name": self.from_entity(entity="name"), 
     #              "dob": self.from_entity(entity="dob")}
 
+    def asEventMessage(self, message, data = {}):
+        return {"event": "bot", "text": message, "data": data}
+
     def validate_name(
         self,
         value: Text,
@@ -34,7 +37,6 @@ class SicknessForm(FormAction):
 
         if (len(value.split(" ")) != 2):
             print("wrong")
-            dispatcher.utter_template("utter_ask_name", tracker)
             return {"num_people": None}
         
         print("OK")
@@ -62,11 +64,9 @@ class SicknessForm(FormAction):
         print(response)
 
         if (response.ok):
-            dispatcher.utter_message("Informationen erfolgreich gespeichert")
-            return []
+            return [self.asEventMessage("Informationen erfolgreich gespeichert")]
 
-        dispatcher.utter_message("Die eingegebenen Inromationen sind nicht korrekt, Konversation wird zurückgesetzt")
-        return [Restarted()]
+        return [self.asEventMessage("Die eingegebenen Inromationen sind nicht korrekt, Konversation wird zurückgesetzt"), Restarted()]
 
 class WelcomeAction(Action):
     def name(self):

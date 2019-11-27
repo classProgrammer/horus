@@ -43,5 +43,26 @@ Request Body:
 }
 ```
 
+### Rasa im lokalen Docker Container
+```shell
+docker-compose up
+´´´
+File docker-compse.yml enthält den Startup Code.
+```
+
+### Rasa Azure Cycle
+```shell
+ docker build -t horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom .
+ 
+ docker login horusrasaregistry.azurecr.io
+ 
+ docker push horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom
+ 
+ docker build -f app.Dockerfile -t horusrasaregistry.azurecr.io/rasa/rasa:custom .
+  
+ docker push horusrasaregistry.azurecr.io/rasa/rasa:custom
+´´´
+Im Cloud interface docker-compose_.yml verwenden um die Container zu pullen und zu starten.
+
 ## Referenzen
 - [Rasa Dokumentation](https://rasa.com/docs/)

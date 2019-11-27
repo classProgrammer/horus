@@ -6,11 +6,11 @@ services:
       - 80:5005
     volumes:
       - ./:/app
-    command: >
+    command:
       run 
       --enable-api
       --endpoints endpoints.yml
-      --cors "*" 
+      --cors *
     
   action_server:
     image: rasa/rasa-sdk:latest

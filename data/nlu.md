@@ -21,6 +21,26 @@
 - servus
 - servas
 - Guten Tag
+- bis bald
+
+## intent:stop
+- stop
+- stopp
+- beenden
+- abbrechen
+- aufhören
+- ende
+- abbruch
+
+## intent:thanks
+- danke
+- thx
+- THX
+- K THX
+- vielen dank
+- super
+- perfekt
+- wunderbar
 
 ## intent:greet
 - Hi
@@ -36,6 +56,26 @@
 - Hey bot
 - hi
 
+## intent:cando
+- Was kannst du?
+- Was kannst du
+- Wie kannst du mir helfen
+- was machst du
+- welche aktionen kannst du ausführen
+
+## intent:are_you_a_bot
+- bist du ein bot
+- bist du ein mensch
+- hast du gefühle
+- bist du eine maschiene
+- bist du ein roboter
+- kannst du fühlen 
+- bist du echt
+- bot?
+- roboter?
+- mensch?
+
+<!-- 
 ## intent:holiday
 - Ich brauche Urlaub
 - urlaub
@@ -43,7 +83,7 @@
 - Ich will Urlaub beantragen
 - Ich will Urlaub
 - Ich benötige Uralaub
-- Urlaubsantrag
+- Urlaubsantrag -->
 
 ## intent:sickness
 - Ich bin krank

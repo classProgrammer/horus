@@ -2,9 +2,13 @@ intents:
 - greet
 - goodbye
 - sickness
-- holiday
-- fetch_holiday_data:
-    use_entities: []
+- stop
+- thanks
+#- holiday
+- are_you_a_bot
+- cando
+# - fetch_holiday_data:
+#     use_entities: []
 - fetch_sickness_data:
     use_entities: []
 entities:
@@ -18,6 +22,8 @@ slots:
     type: unfeaturized
     auto_fill: false
 templates:
+  utter_i_can_do:
+  - text: Ich kann eine Krankmeldung durchführen
   utter_ask_name:
   - text: Ich benötige deinen Namen um die Krankmeldung durchzuführen
   - text: Bitte gib mir deinen Namen um die Krankmeldung durchzuführen
@@ -54,6 +60,17 @@ templates:
   - text: Gute Genesung {name}, {dob}
   - text: Das ist schade, gute Besserung {name}, {dob}
   - text: Ich hoffe dir geht es bald besser {name}, {dob}
+  utter_i_am_a_bot:
+  - text: Ich bin ein Chatbot
+  - text: Ich bin ein Bot
+  - text: Ich bin ein Roboter
+  utter_stop:
+  - text: Operation wird abgebrochen
+  utter_thanks:
+  - text: Kein Problem
+  - text: Keine Ursache
+  - text: Sehr gerne
+  - text: Immer wieder gerne
 actions:
 - utter_greet
 - utter_goodbye
@@ -64,5 +81,9 @@ actions:
 - action_restart
 - utter_authorize
 - utter_happy_holidays
+- utter_i_can_do
+- utter_i_am_a_bot
+- utter_stop
+- utter_thanks
 forms:
 - sickness_form

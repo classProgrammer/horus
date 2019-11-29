@@ -1,35 +1,35 @@
-# Masterarbeit Projekt Chatbot
+# Masterthesis Chatbot Project
 
-## Rasa Struktur
- - nlu: Definition aller Intents
- - domain: Definition von allem das Namentlich angesprochen werden soll
- - stories: Definition des Konversationsflusses
- - actions: Validierung und Verarbeitung von Daten die der Nutzer eingiebt
+## Rasa Structure
+ - nlu: Intent Definition
+ - domain: Definition of all adressable components
+ - stories: Definition of conversation structures/scripts
+ - actions: Validation and processing of data
 
-## Rasa Installation
+## Rasa Install Guide
 - [Rasa Get Started](https://rasa.com/docs/getting-started/)
 
-## Ausführen des Projekts
-### Trainierne des Netzwerks:
+## Project Lifecycle Methods
+### Train the Network:
 ```shell
 shell@something/.../horus> rasa train
 ```
-### Starten des Action Servers von Rasa
+### Start the Action Server
 ```shell
 shell@something/.../horus> rasa run actions
 ```
 
-### Starten der lokalen Rasa Shell
+### Start the local Rasa Shell
 ```shell
 shell@something/.../horus> rasa shell
 ```
 
-### Starten von Rasa-X (Browser Umgebung)
+### Start Rasa-X (Browser)
 ```shell
 shell@something/.../horus> rasa x
 ```
 
-### Rasa als lokalen HTTP Server verwenden
+### Run Rasa as local HTTP Server
 ```shell
 shell@something/.../horus> rasa run --enable-api --cors "*"
 ```
@@ -43,14 +43,34 @@ Request Body:
 }
 ```
 
-### Rasa im lokalen Docker Container
+### Rasa in a local Docker Container
+#### Startup Command
 ```shell
 docker-compose up
-´´´
-File docker-compse.yml enthält den Startup Code.
+```
+#### Docker Compose File
+```yml
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:latest
+    ports:
+      - 80:5005
+    volumes:
+      - ./:/app
+    command:
+      run 
+      --enable-api
+      --endpoints endpoints.yml
+      --cors *
+    
+  action_server:
+    image: rasa/rasa-sdk:latest
+    volumes:
+      - ./actions:/app/actions
 ```
 
-### Rasa Azure Cycle
+### Rasa Azure Docker Container
 ```shell
  docker build -t horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom .
  
@@ -61,8 +81,40 @@ File docker-compse.yml enthält den Startup Code.
  docker build -f app.Dockerfile -t horusrasaregistry.azurecr.io/rasa/rasa:custom .
   
  docker push horusrasaregistry.azurecr.io/rasa/rasa:custom
-´´´
-Im Cloud interface docker-compose_.yml verwenden um die Container zu pullen und zu starten.
+```
+#### Action Server Image
+```dockerfile
+FROM rasa/rasa-sdk:latest
+LABEL maintainer="Spenlingwimer Gerald" version="1.0"
+COPY ./actions /app/actions
+```
+#### Rasa Image
+```dockerfile
+FROM rasa/rasa:latest
+LABEL maintainer="Spenlingwimer Gerald" version="1.4"
+COPY ./ /app
+CMD [ "run", "--enable-api", "--cors", "*" ]
+```
+#### Azure Compose File
+```yml
+version: '3.0'
+services:
+  rasa:
+    image: horusrasaregistry.azurecr.io/rasa/rasa:custom
+    ports:
+      - 80:5005
+    networks: 
+      - app_net
+    
+  action_server:
+    image: horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom
+    expose: 
+      - 5055
+    networks: 
+      - app_net
+networks: 
+  app_net:
+```
 
-## Referenzen
-- [Rasa Dokumentation](https://rasa.com/docs/)
+## Source of Information
+- [Rasa Documentation](https://rasa.com/docs/)

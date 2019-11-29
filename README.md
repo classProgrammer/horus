@@ -33,7 +33,7 @@ shell@something/.../horus> rasa x
 ```shell
 shell@something/.../horus> rasa run --enable-api --cors "*"
 ```
-Erreichbar unter http://localhost:5005/webhooks/rest/webhook
+Local Address: http://localhost:5005/webhooks/rest/webhook
 
 Request Body:
 ```json
@@ -71,6 +71,12 @@ services:
 ```
 
 ### Rasa Azure Docker Container
+
+Addresses: 
+  - [Base](https://3bitrasa.azurewebsites.net/)
+  - [Rest](https://3bitrasa.azurewebsites.net/webhooks/rest)
+  - [Requests](https://3bitrasa.azurewebsites.net/webhooks/rest/webhook)
+  
 ```shell
  docker build -t horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom .
  

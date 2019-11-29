@@ -4,14 +4,11 @@ intents:
 - sickness
 - stop
 - thanks
-#- holiday
 - are_you_a_bot
 - cando
-- out_of_scope
-# - fetch_holiday_data:
-#     use_entities: []
 - fetch_sickness_data:
     use_entities: []
+- holiday
 entities:
 - name
 - dob
@@ -22,6 +19,8 @@ slots:
   name:
     type: unfeaturized
     auto_fill: false
+  requested_slot:
+    type: unfeaturized
 templates:
   utter_i_can_do:
   - text: Ich kann eine Krankmeldung durchführen

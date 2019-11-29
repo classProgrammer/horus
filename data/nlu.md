@@ -1,3 +1,22 @@
+## intent:are_you_a_bot
+- bist du ein bot
+- bist du ein mensch
+- hast du gefühle
+- bist du eine maschiene
+- bist du ein roboter
+- kannst du fühlen
+- bist du echt
+- bot?
+- roboter?
+- mensch?
+
+## intent:cando
+- Was kannst du?
+- Was kannst du
+- Wie kannst du mir helfen
+- was machst du
+- welche aktionen kannst du ausführen
+
 ## intent:fetch_sickness_data
 - [Hans Wurst](name), [12.05.1986](dob)
 - Ich bin [Anna Nass](name) geboren am [07.09.1958](dob)
@@ -9,6 +28,14 @@
 - [Yoda Starwars](name) [30.03.1997](dob)
 - [Ozzy Osbourne](name) [24.06.1994](dob)
 - [Hans Wurst](name) [27.04.1997](dob)
+- [Alfred Johansson](name), [12.12.2012](dob)
+- [Scarlett Johansson](name)
+- [Natalie Portman](name)
+- [Michael Jackson](name)
+- [Sebastian Berg](name)
+- Anna Fakename
+- 28.02.1999
+- Johan Aichberger
 
 ## intent:goodbye
 - tschau
@@ -16,31 +43,11 @@
 - tschüss
 - tschüs
 - bye
-- danke
 - ende
 - servus
 - servas
 - Guten Tag
 - bis bald
-
-## intent:stop
-- stop
-- stopp
-- beenden
-- abbrechen
-- aufhören
-- ende
-- abbruch
-
-## intent:thanks
-- danke
-- thx
-- THX
-- K THX
-- vielen dank
-- super
-- perfekt
-- wunderbar
 
 ## intent:greet
 - Hi
@@ -56,26 +63,6 @@
 - Hey bot
 - hi
 
-## intent:cando
-- Was kannst du?
-- Was kannst du
-- Wie kannst du mir helfen
-- was machst du
-- welche aktionen kannst du ausführen
-
-## intent:are_you_a_bot
-- bist du ein bot
-- bist du ein mensch
-- hast du gefühle
-- bist du eine maschiene
-- bist du ein roboter
-- kannst du fühlen 
-- bist du echt
-- bot?
-- roboter?
-- mensch?
-
-<!-- 
 ## intent:holiday
 - Ich brauche Urlaub
 - urlaub
@@ -83,7 +70,7 @@
 - Ich will Urlaub beantragen
 - Ich will Urlaub
 - Ich benötige Uralaub
-- Urlaubsantrag -->
+- Urlaubsantrag
 
 ## intent:sickness
 - Ich bin krank
@@ -99,3 +86,34 @@
 - Heute bin ich krank
 - Ich kann heute nicht zur Arbeit gehen
 - ich bin krank
+- Hi, ich bin krank. kannst du mir helfen?
+- krankmelden
+- krank
+- ich bin krank, kannst du mir helfen?
+
+## intent:stop
+- stop
+- stopp
+- beenden
+- abbrechen
+- aufhören
+- ende
+- abbruch
+
+## intent:thanks
+- danke
+- danke
+- thx
+- THX
+- K THX
+- vielen dank
+- super
+- perfekt
+- wunderbar
+- danke, du warst ziemlich hilfreich
+
+## regex:dob
+- ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$
+
+## regex:name
+- ^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$

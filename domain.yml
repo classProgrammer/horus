@@ -7,6 +7,7 @@ intents:
 #- holiday
 - are_you_a_bot
 - cando
+- out_of_scope
 # - fetch_holiday_data:
 #     use_entities: []
 - fetch_sickness_data:
@@ -71,6 +72,12 @@ templates:
   - text: Keine Ursache
   - text: Sehr gerne
   - text: Immer wieder gerne
+  utter_did_not_understand:
+  - text: Kannst du das bitte wiederholen
+  - text: Ich habe dich nicht verstanden
+  - text: Kannst du das bitte nochmal wiederholen
+  - text: Ich habe dich leider nicht verstanden
+  - text: Ich konnte die Anfrage leider nicht zuordnen
 actions:
 - utter_greet
 - utter_goodbye
@@ -85,5 +92,6 @@ actions:
 - utter_i_am_a_bot
 - utter_stop
 - utter_thanks
+- utter_did_not_understand
 forms:
 - sickness_form

@@ -35,23 +35,14 @@
 
 ## unahppy stop 1
 * sickness
-    - utter_ask_name
+    - utter_authorize
 * stop
     - utter_stop
     - action_restart
 
-## unhappy stop 2
-* greet
-    - utter_greet
+## unhappy stop in the middle
 * sickness
-    - utter_ask_name
-* stop
-    - utter_stop
-    - action_restart
-
-## unhappy Break in the Middle
-* sickness
-    - utter_ask_name
+    - utter_authorize
 * fetch_sickness_data{"name":"Franz Bauer"}
     - sickness_form
     - form{"name":"sickness_form"}
@@ -66,7 +57,7 @@
 
 ## happy path 1
 * sickness
-    - utter_ask_name
+    - utter_authorize
 * fetch_sickness_data{"name":"Harry Potter","dob":"24.05.1965"}
     - sickness_form
     - form{"name":"sickness_form"}
@@ -79,7 +70,7 @@
 
 ## happy path 2
 * sickness
-    - utter_ask_name
+    - utter_authorize
 * fetch_sickness_data{"name":"Alfons Houthen"}
     - sickness_form
     - form{"name":"sickness_form"}
@@ -95,7 +86,7 @@
 
 ## happy path 3
 * sickness
-    - utter_ask_name
+    - utter_authorize
 * fetch_sickness_data{"dob":"30.09.2000"}
     - sickness_form
     - form{"name":"sickness_form"}
@@ -111,7 +102,7 @@
     
 ## unhappy break after dob
 * sickness
-    - utter_ask_name
+    - utter_authorize
 * fetch_sickness_data{"dob":"23.06.1967"}
     - sickness_form
     - form{"name":"sickness_form"}

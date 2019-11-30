@@ -13,7 +13,6 @@ import re
 class SicknessForm(FormAction):
 
     name_pattern = re.compile("^(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) )(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) ?)*$")
-    dob_pattern = re.compile("^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)?\d{2})\s*$")
 
     def name(self) -> Text:
         return "sickness_form"
@@ -37,33 +36,11 @@ class SicknessForm(FormAction):
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
         value = value.strip()
-        
-        print("Found", value)
 
         if SicknessForm.name_pattern.match(value):
-            print("OK")
             return {"name": value}
 
-        print("wrong")
         return {"name": None}
-
-    def validate_dob(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> Dict[Text, Any]:
-        value = value.strip()
-        
-        print("Found", value)
-
-        if SicknessForm.dob_pattern.match(value):
-            print("OK")
-            return {"dob": value}
-
-        print("wrong")
-        return {"dob": None}
 
     def submit(
         self,
@@ -82,7 +59,6 @@ class SicknessForm(FormAction):
         headers = {'Content-type': 'application/json'}
         url = 'https://resteasy.azurewebsites.net/sick'
         response = requests.post(url, data=data, headers=headers)
-        print(response)
 
         if (response.ok):
             return [self.asEventMessage("Informationen erfolgreich gespeichert")]

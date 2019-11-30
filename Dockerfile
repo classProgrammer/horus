@@ -1,5 +1,5 @@
 FROM rasa/rasa-sdk:latest
 
-LABEL maintainer="Spenlingwimer Gerald" version="1.0"
+LABEL maintainer="Spenlingwimer Gerald" version="1.1"
 
 COPY ./actions /app/actions

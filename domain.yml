@@ -8,9 +8,10 @@ intents:
 - cando
 - retry
 - decline
+- how_are_you
+- chitchat
 - fetch_sickness_data:
     use_entities: []
-- holiday
 entities:
 - name
 - dob
@@ -24,6 +25,10 @@ slots:
   requested_slot:
     type: unfeaturized
 templates:
+  utter_how_are_you:
+    - text: Robotastisch! Wie fühlst du dich?
+    - text: Voller Energie. Wie geht es dir?
+    - text: Unter Strom. Wie geht es dir heute?
   utter_help:
   - text: Kann ich sonst behilflich sein?
   - text: Kann ich sonst mit etwas behilflich sein?
@@ -41,8 +46,6 @@ templates:
   utter_authorize:
   - text: Bitte gib mir deinen Namen und dein Geburtsdatum im Format [VORNAME NACHNAME,
       DD.MM.YYYY] für die Krankmeldung
-  utter_happy_holidays:
-  - text: Ich wünsche einen schönen Urlaub
   utter_greet:
   - text: Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?
   - text: Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?
@@ -93,12 +96,11 @@ actions:
 - utter_ask_dob
 - action_restart
 - utter_authorize
-- utter_happy_holidays
 - utter_i_can_do
 - utter_i_am_a_bot
 - utter_stop
 - utter_thanks
 - utter_did_not_understand
-- action_slot_reset
+- utter_how_are_you
 forms:
 - sickness_form

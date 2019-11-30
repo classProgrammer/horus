@@ -4,12 +4,16 @@ from typing import Dict, Text, Any, List, Union, Optional
 from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction, SlotSet
-from rasa_sdk.events import Restarted, AllSlotsReset
+from rasa_sdk.events import Restarted
 
 import requests
 import json
+import re
 
 class SicknessForm(FormAction):
+
+    name_pattern = re.compile("^(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) )(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) ?)*$")
+    dob_pattern = re.compile("^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)?\d{2})\s*$")
 
     def name(self) -> Text:
         return "sickness_form"
@@ -18,8 +22,48 @@ class SicknessForm(FormAction):
     def required_slots(tracker: Tracker) -> List[Text]:
         return ["name", "dob"]
 
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        return { "name": self.from_entity(entity="name"), 
+                 "dob": self.from_entity(entity="dob")}
+
     def asEventMessage(self, message, data = {}):
         return {"event": "bot", "text": message, "data": data}
+
+    def validate_name(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Dict[Text, Any]:
+        value = value.strip()
+        
+        print("Found", value)
+
+        if SicknessForm.name_pattern.match(value):
+            print("OK")
+            return {"name": value}
+
+        print("wrong")
+        return {"name": None}
+
+    def validate_dob(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Dict[Text, Any]:
+        value = value.strip()
+        
+        print("Found", value)
+
+        if SicknessForm.dob_pattern.match(value):
+            print("OK")
+            return {"dob": value}
+
+        print("wrong")
+        return {"dob": None}
 
     def submit(
         self,
@@ -47,14 +91,7 @@ class SicknessForm(FormAction):
 
 class RestartAction(Action):
     def name(self):
-        return "action_restart" # include action in domain file
+        return "action_restart" 
 
     def run(self, dispatcher, tracker, domain):
         return [Restarted()]
-
-class SlotResetAction(Action):
-    def name(self):
-        return "action_slot_reset" # include action in domain file
-
-    def run(self, dispatcher, tracker, domain):
-        return [AllSlotsReset()]

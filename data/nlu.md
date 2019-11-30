@@ -194,14 +194,28 @@
 - Hey bot
 - hi
 
-## intent:holiday
-- Ich brauche Urlaub
-- urlaub
-- Urlaub
-- Ich will Urlaub beantragen
-- Ich will Urlaub
-- Ich benötige Uralaub
-- Urlaubsantrag
+## intent:how_are_you
+- wie gehts dir
+- wie geht es dir
+- was ist los
+- was geht ab
+- gehts dir gut
+- bist du gut gelaunt
+- wie bist du drauf
+
+## intent:chitchat
+- mir gehts gut
+- ich bin gut drauf
+- OK
+- ok
+- passt schon
+- nicht so gut
+- nicht gut
+- super
+- spitze
+- mega
+- super gut
+- gut
 
 ## intent:sickness
 - Ich bin krank
@@ -246,7 +260,6 @@
 - K THX
 - vielen dank
 - vielen Dank
-- super
 - perfekt
 - wunderbar
 - danke, du warst ziemlich hilfreich

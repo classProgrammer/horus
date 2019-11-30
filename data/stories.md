@@ -39,22 +39,6 @@
 * stop
     - utter_stop
 
-## Failed
-* sickness
-    - action_slot_reset
-    - sickness_form
-    - form{"name":"sickness_form"}
-    - slot{"requested_slot":"name"}
-* fetch_sickness_data{"name":"Annakova Nastrovje"}
-    - sickness_form
-    - slot{"name":"Annakova Nastrovje"}
-    - slot{"requested_slot":"dob"}
-* fetch_sickness_data{"dob":"12.12.2000"}
-    - sickness_form
-    - slot{"dob":"12.12.2000"}
-    - form{"name":null}
-    - slot{"requested_slot":null}
-
 ## happy path 1
 * greet
     - utter_greet
@@ -72,7 +56,7 @@
     - slot{"requested_slot":null}
     - utter_get_well_soon_with_name
 
-## Break in the Middle
+## unhappy Break in the Middle
 * cando
     - utter_i_can_do
 * sickness
@@ -89,7 +73,7 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 
-## happy path 2, thanks
+## happy path 2
 * sickness
     - action_slot_reset
     - utter_ask_name
@@ -100,10 +84,11 @@
     - slot{"dob":"31.08.1993"}
     - form{"name":null}
     - slot{"requested_slot":null}
+    - utter_get_well_soon_with_name
 * thanks
     - utter_thanks
 
-## happy path 3, Retry Retry Submission
+## happy path 3
 * sickness
     - action_slot_reset
     - utter_ask_name
@@ -114,5 +99,6 @@
     - slot{"dob":"31.08.1993"}
     - form{"name":null}
     - slot{"requested_slot":null}
+    - utter_get_well_soon_with_name
 * goodbye
     - utter_goodbye

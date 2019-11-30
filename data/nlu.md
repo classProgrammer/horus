@@ -241,11 +241,11 @@
 
 ## intent:thanks
 - danke
-- danke
 - thx
 - THX
 - K THX
 - vielen dank
+- vielen Dank
 - super
 - perfekt
 - wunderbar

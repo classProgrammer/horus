@@ -46,9 +46,9 @@ templates:
   - text: Ich brauche noch dein Geburtsdatum im Format dd.mm.yyyy
   - text: Zur Bearbeitung brauche ich noch dein Geburtsdatum im Format dd.mm.yyyy
   utter_authorize:
-  - text: Bitte gib mir deinen Namen und dein Geburtsdatum im Format VORNAME NACHNAME
+  - text: Bitte gib mir deinen Namen und dein Geburtsdatum im Format Vorname Nachname
       DD.MM.YYYY für die Krankmeldung
-  - text: Für die Krankmeldung brauch ich deinen Namen und dein Geburtsdatum im Format VORNAME NACHNAME
+  - text: Für die Krankmeldung brauch ich deinen Namen und dein Geburtsdatum im Format Vorname Nachname
       DD.MM.YYYY
   utter_greet:
   - text: Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?

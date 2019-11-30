@@ -4,4 +4,4 @@ LABEL maintainer="Spenlingwimer Gerald" version="1.5"
 
 COPY ./ /app
 
-CMD [ "run", "--enable-api", "--cors", "\"*\""" ]
+CMD [ "run", "--enable-api", "--cors", "*" ]

@@ -6,6 +6,8 @@ intents:
 - thanks
 - are_you_a_bot
 - cando
+- retry
+- decline
 - fetch_sickness_data:
     use_entities: []
 - holiday
@@ -22,6 +24,11 @@ slots:
   requested_slot:
     type: unfeaturized
 templates:
+  utter_help:
+  - text: Kann ich sonst behilflich sein?
+  - text: Kann ich sonst mit etwas behilflich sein?
+  - text: Darf ich mit etwas anderem helfen?
+  - text: Brauchst du sonst bei etwas hilfe?
   utter_i_can_do:
   - text: Ich kann eine Krankmeldung durchführen
   utter_ask_name:
@@ -29,8 +36,8 @@ templates:
   - text: Bitte gib mir deinen Namen um die Krankmeldung durchzuführen
   - text: Zur Durchführung brauche ich bitte deinen Namen
   utter_ask_dob:
-  - text: Ich brauche noch dein Geburtsdatum
-  - text: Zur Bearbeitung brauche ich noch dein Geburtsdatum
+  - text: Ich brauche noch dein Geburtsdatum im Format dd.mm.yyyy
+  - text: Zur Bearbeitung brauche ich noch dein Geburtsdatum im Format dd.mm.yyyy
   utter_authorize:
   - text: Bitte gib mir deinen Namen und dein Geburtsdatum im Format [VORNAME NACHNAME,
       DD.MM.YYYY] für die Krankmeldung
@@ -92,5 +99,6 @@ actions:
 - utter_stop
 - utter_thanks
 - utter_did_not_understand
+- action_slot_reset
 forms:
 - sickness_form

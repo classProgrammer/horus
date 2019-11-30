@@ -17,6 +17,15 @@
 - was machst du
 - welche aktionen kannst du ausführen
 
+## intent:decline
+- nein
+- nope
+- nö
+- niet
+- not
+- Nein
+- NEIN
+
 ## intent:fetch_sickness_data
 - [Hans Wurst](name), [12.05.1986](dob)
 - Ich bin [Anna Nass](name) geboren am [07.09.1958](dob)
@@ -33,9 +42,131 @@
 - [Natalie Portman](name)
 - [Michael Jackson](name)
 - [Sebastian Berg](name)
-- Anna Fakename
-- 28.02.1999
-- Johan Aichberger
+- [Hans Wurst](name), [27.04.1997](dob)
+- [Anna Markson](name)
+- [21.02.1963](dob)
+- [26.12.1967](dob)
+- [23.06.1968](dob)
+- [22.11.1971](dob)
+- [31.01.1975](dob)
+- [15.01.1977](dob)
+- [04.05.1978](dob)
+- [18.04.1979](dob)
+- [27.03.1982](dob)
+- [22.02.1984](dob)
+- [04.07.1985](dob)
+- [21.08.1985](dob)
+- [09.05.1986](dob)
+- [02.02.1990](dob)
+- [03.08.1992](dob)
+- [06.02.1993](dob)
+- [13.08.1995](dob)
+- [13.11.1998](dob)
+- [12.08.2000](dob)
+- [12.07.2001](dob)
+- [Adnaan Prince](name)
+- [Gordon Colon](name)
+- [Ayyan Mcfarlane](name)
+- [Amber Farmer](name)
+- [Tai Mackenzie](name)
+- [Sanaya Rosales](name)
+- [Ashlyn Hogan](name)
+- [Abdur Haigh](name)
+- [Herbie Stewart](name)
+- [Zunairah Mullins](name)
+- [Wade Mcdaniel](name)
+- [Sandra Salazar](name)
+- [Stanley Meza](name)
+- [Honor Pierce](name)
+- [Ayva Flower](name)
+- [Jadine Roy](name)
+- [Talha Braun](name)
+- [Fahmida Greenwood](name)
+- [Jed Marquez](name)
+- [Cheryl Cleveland](name)
+- [Aayat Baxter](name)
+- [Anisha Leech](name)
+- [Kain Irwin](name)
+- [Kaitlan Hines](name)
+- [Nyah Goff](name)
+- [Karam Jaramillo](name)
+- [Lottie Bassett](name)
+- [Laurel Smyth](name)
+- [Macaulay Rankin](name)
+- [Eliza Croft](name)
+- [10/05/1959](dob)
+- [14/12/1968](dob)
+- [31/10/1969](dob)
+- [11/02/1972](dob)
+- [16/05/1972](dob)
+- [21/11/1976](dob)
+- [16/03/1977](dob)
+- [17/09/1977](dob)
+- [21/09/1980](dob)
+- [28/02/1981](dob)
+- [31/12/1981](dob)
+- [28/01/1982](dob)
+- [28/05/1987](dob)
+- [18/11/1993](dob)
+- [25/06/1994](dob)
+- [14/04/1995](dob)
+- [11/09/1998](dob)
+- [31/05/2000](dob)
+- [17/11/2000](dob)
+- [11/01/2001](dob)
+- [Annakova Nastrovje](name)
+- [Hans Wurst](name)
+- [12.12.2000](dob)
+- [Kiley Sydow](name)
+- [Donnetta Grow](name)
+- [Griselda Nunez](name)
+- [Lucina Drinkwater](name)
+- [Carson Slaven](name)
+- [Marc Bacchus](name)
+- [Pam Compo](name)
+- [Bryce Atchison](name)
+- [Leatha Dynes](name)
+- [Arla Labuda](name)
+- [Apolonia Grenier](name)
+- [Concetta Christenberry](name)
+- [Yanira Jansen](name)
+- [Fran Chiou](name)
+- [Delmy Marine](name)
+- [Jerrold Hornbuckle](name)
+- [Sabrina Zachary](name)
+- [Denis Lamons](name)
+- [Sade Zona](name)
+- [Beth Conant](name)
+- [Iraida Corner](name)
+- [Ferne Mcelwain](name)
+- [Norman Oswald](name)
+- [Linda Cannady](name)
+- [Lanora Cooke](name)
+- [Etta Jenny](name)
+- [Benton Lile](name)
+- [Coleen Shore](name)
+- [Eleonore Grewell](name)
+- [Lesley Gularte](name)
+- [Hannes Schwefel](name)
+- [Jens Laar](name)
+- [Mario Wöhler](name)
+- [Uwe Springer](name)
+- [Albert Braunbeck](name)
+- [Philipp Kruspe](name)
+- [Kim Reder](name)
+- [Jan Hopfer](name)
+- [Nicola Weinwurm](name)
+- [Janik Klein](name)
+- [Ingrid Habich](name)
+- [Elly Schützenberger](name)
+- [Waltraud Kraus](name)
+- [Luna Lachner](name)
+- [Marike Gehrke](name)
+- [Marie Raabe](name)
+- [Ivonne Fahr](name)
+- [Erdmute Lachs](name)
+- [Anna Bähr](name)
+- [Ute Feilhaber](name)
 
 ## intent:goodbye
 - tschau
@@ -90,6 +221,14 @@
 - krankmelden
 - krank
 - ich bin krank, kannst du mir helfen?
+- ich sein krank
+- krank sein
+- ich muss mich heute krank melden
+- krankmeldung wiederholen
+- nochmal krank melden
+- krankmeldung wiederholen
+- noch einmal krank
+- nochmal krank
 
 ## intent:stop
 - stop
@@ -113,7 +252,7 @@
 - danke, du warst ziemlich hilfreich
 
 ## regex:dob
-- ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$
+- ^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)?\d{2})\s*$
 
 ## regex:name
-- ^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$
+- ^(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) )(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) ?)*$

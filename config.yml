@@ -6,6 +6,6 @@ policies:
 - name: MappingPolicy
 - name: FormPolicy
 - name: FallbackPolicy
-  nlu_threshold: 0.45
-  core_threshold: 0.35
+  nlu_threshold: 0.4
+  core_threshold: 0.3
   fallback_action_name: utter_did_not_understand

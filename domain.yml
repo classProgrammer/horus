@@ -22,15 +22,13 @@ slots:
   name:
     type: unfeaturized
     auto_fill: false
-  requested_slot:
-    type: unfeaturized
 templates:
   utter_how_are_you:
-    - text: Robotastisch! Wie fühlst du dich?
-    - text: Voller Energie. Wie geht es dir?
-    - text: Unter Strom. Wie geht es dir heute?
-    - text: Bottastisch! Wei gehts dir?
-    - text: Voll aufgeladen. Wie siehts bei dir aus?
+  - text: Robotastisch! Wie fühlst du dich?
+  - text: Voller Energie. Wie geht es dir?
+  - text: Unter Strom. Wie geht es dir heute?
+  - text: Bottastisch! Wei gehts dir?
+  - text: Voll aufgeladen. Wie siehts bei dir aus?
   utter_help:
   - text: Kann ich sonst behilflich sein?
   - text: Kann ich sonst mit etwas behilflich sein?
@@ -48,8 +46,8 @@ templates:
   utter_authorize:
   - text: Bitte gib mir deinen Namen und dein Geburtsdatum im Format Vorname Nachname
       DD.MM.YYYY für die Krankmeldung
-  - text: Für die Krankmeldung brauch ich deinen Namen und dein Geburtsdatum im Format Vorname Nachname
-      DD.MM.YYYY
+  - text: Für die Krankmeldung brauch ich deinen Namen und dein Geburtsdatum im Format
+      Vorname Nachname DD.MM.YYYY
   utter_greet:
   - text: Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?
   - text: Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?

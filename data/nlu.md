@@ -335,6 +335,30 @@
 - noch einmal krank
 - nochmal krank
 - krankmeldung
+- schlecht
+- angegriffen
+- fertig
+- ausgegangen
+- matt
+- elend
+- erledigt
+- erschöpft
+- angeschlagen
+- überfordert
+- überlastet
+- entkräftet
+- leidend
+- kränklich
+- schlaff
+- bettlägerig
+- unwohl
+- entmutigt
+- schlapp
+- unpässlich
+- erkältet
+- verschnupft
+- arbeitsunfähig
+- dienstunfähig
 
 ## intent:stop
 - stop

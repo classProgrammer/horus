@@ -297,6 +297,16 @@
 - gehts dir gut
 - bist du gut gelaunt
 - wie bist du drauf
+- Wie stehen die Aktien?
+- Was geht digga?
+- Alles im Lack?
+- Alles fit?
+- Was geht?
+- Wie läuft es denn so?
+- Wie läuft's?
+- Alles klar?
+- Alles klar bei dir?
+- Wie läuft's bei dir?
 
 ## intent:sickness
 - Ich bin krank

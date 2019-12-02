@@ -9,6 +9,8 @@
 - bot?
 - roboter?
 - mensch?
+- was bist du?
+- wer bist du
 
 ## intent:cando
 - Was kannst du?
@@ -220,6 +222,20 @@
 - servas
 - Guten Tag
 - bis bald
+- Ade
+- Adieu
+- Auf Wiedersehen
+- Auf bald
+- Bis bald
+- Bis dann
+- Bye
+- Ciao
+- Mach's gut
+- Salü
+- Tschö
+- Tschüs
+- Tschüss
+- Wir sehen uns!
 
 ## intent:greet
 - Hi

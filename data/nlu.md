@@ -11,6 +11,8 @@
 - mensch?
 - was bist du?
 - wer bist du
+- Blechkamerad
+- bist ein automat?
 
 ## intent:cando
 - Was kannst du?
@@ -209,7 +211,7 @@
 - [11.13.1992](dob)
 - [12.12.2012](dob)
 - [27.04.1997](dob)
-- [Hans Wurst](name:hans wurst)
+- [Hans Wurst](name)
 
 ## intent:goodbye
 - tschau

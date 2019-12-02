@@ -30,6 +30,9 @@ templates:
   - text: Unter Strom. Wie geht es dir heute?
   - text: Bottastisch! Wei gehts dir?
   - text: Voll aufgeladen. Wie siehts bei dir aus?
+  - text: Wie eine Maschiene
+  - text: Als ob ich ein Roboter wäre
+  - text: 
   utter_help:
   - text: OK. Kann ich sonst behilflich sein?
   - text: OK, kann ich sonst mit etwas behilflich sein?
@@ -37,6 +40,7 @@ templates:
   - text: OK. Brauchst du sonst bei etwas Hilfe?
   utter_i_can_do:
   - text: Ich kann eine Krankmeldung durchführen
+  - text: Ich kann dich krank melden
   utter_ask_name:
   - text: Ich benötige deinen Namen um die Krankmeldung durchzuführen
   - text: Bitte gib mir deinen Namen um die Krankmeldung durchzuführen
@@ -62,6 +66,7 @@ templates:
   - text: Bye
   - text: Danke für Ihre Geduld
   - text: Danke für Ihre Kooperation
+  - text: Tschau
   utter_get_well_soon:
   - text: Gute Besserung
   - text: Ich hoffe es geht Ihnen bald Besser
@@ -77,19 +82,24 @@ templates:
   - text: Ich bin ein Chatbot
   - text: Ich bin ein Bot
   - text: Ich bin ein Roboter
+  - text: Ich bin einen Maschiene
+  - text: Bip Bu Bip
   utter_stop:
   - text: Operation wird abgebrochen
+  - text: Operation abgebrochen
+  - text: Operation wird gestopt
   utter_thanks:
   - text: Kein Problem
   - text: Keine Ursache
   - text: Sehr gerne
   - text: Immer wieder gerne
   utter_did_not_understand:
-  - text: Kannst du das bitte wiederholen
+  - text: Kannst du das bitte wiederholen?
   - text: Ich habe dich nicht verstanden
-  - text: Kannst du das bitte nochmal wiederholen
+  - text: Kannst du das bitte nochmal wiederholen?
   - text: Ich habe dich leider nicht verstanden
   - text: Ich konnte die Anfrage leider nicht zuordnen
+  - text: Kannst du das bitte anders formulieren?
 actions:
 - utter_greet
 - utter_goodbye

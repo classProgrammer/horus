@@ -77,14 +77,14 @@ services:
 networks: 
   app_net:
 ```
-## run the shell
-´´´shell
+#### run the shell
+```shell
     docker run -it -v %cd%:/app rasa/rasa:1.4.6 shell
-´´´
-## train custom model
-´´´shell
+```
+#### train custom model
+```shell
     docker run -v %cd%:/app rasa/rasa:1.4.6 train --domain domain.yml --data data --out models
-´´´
+```
 
 ### Rasa Azure Docker Container
 

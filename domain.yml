@@ -6,7 +6,6 @@ intents:
 - thanks
 - are_you_a_bot
 - cando
-- retry
 - decline
 - how_are_you
 - chitchat
@@ -22,6 +21,8 @@ slots:
   name:
     type: unfeaturized
     auto_fill: false
+  requested_slot:
+    type: unfeaturized
 templates:
   utter_how_are_you:
   - text: Robotastisch! Wie fühlst du dich?
@@ -30,10 +31,10 @@ templates:
   - text: Bottastisch! Wei gehts dir?
   - text: Voll aufgeladen. Wie siehts bei dir aus?
   utter_help:
-  - text: Kann ich sonst behilflich sein?
-  - text: Kann ich sonst mit etwas behilflich sein?
-  - text: Darf ich mit etwas anderem helfen?
-  - text: Brauchst du sonst bei etwas hilfe?
+  - text: OK. Kann ich sonst behilflich sein?
+  - text: OK, kann ich sonst mit etwas behilflich sein?
+  - text: OK, darf ich mit etwas anderem helfen?
+  - text: OK. Brauchst du sonst bei etwas Hilfe?
   utter_i_can_do:
   - text: Ich kann eine Krankmeldung durchführen
   utter_ask_name:
@@ -104,5 +105,6 @@ actions:
 - utter_thanks
 - utter_did_not_understand
 - utter_how_are_you
+- utter_help
 forms:
 - sickness_form

@@ -35,12 +35,18 @@ class SicknessForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
+        print("validation")
+
         value = value.strip()
-
+        print(value)
         if SicknessForm.name_pattern.match(value):
+            print("OK")
             return {"name": value}
-
+        print("NOK")
         return {"name": None}
+
+    headers = {'Content-type': 'application/json'}
+    url = 'https://resteasy.azurewebsites.net/sick'
 
     def submit(
         self,
@@ -48,22 +54,22 @@ class SicknessForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-
         name = tracker.current_slot_values()["name"].lower()
         dob = tracker.current_slot_values()["dob"]
-        data = json.dumps({
+        request_data = json.dumps({
             "name": name,
             "dob": dob
         })
-
-        headers = {'Content-type': 'application/json'}
-        url = 'https://resteasy.azurewebsites.net/sick'
-        response = requests.post(url, data=data, headers=headers)
+        
+        try:
+            response = requests.post(SicknessForm.url, data=request_data, headers=SicknessForm.headers)
+        except:
+            return [self.asEventMessage("Bitte versuchen Sie es später noch einmal. Der Server ist nicht erreichbar. Danke!"), Restarted()]
 
         if (response.ok):
-            return [self.asEventMessage("Informationen erfolgreich gespeichert")]
+            return [self.asEventMessage("Gute Besserung " + name.title() + "! Geboren am " + str(dob)), Restarted()]
 
-        return [self.asEventMessage("Es wurde keine Person zu den eingegebenen Informationen gefunden. Um erneut die Krankmeldung zu probieren bitte Krankmeldung wiederholen eingeben."), Restarted()]
+        return [self.asEventMessage("Person nicht gefunden. Für einen weiteren Versuch bitte Krankmeldung eingeben."), Restarted()]
 
 class RestartAction(Action):
     def name(self):

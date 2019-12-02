@@ -243,13 +243,51 @@
 - Hallo
 - Sup
 - Hallo Bot
-- Kannst du mir helfen?
 - Bist du da
-- Ich brauche deine Hilfe
-- Ich brauche Hilfe
 - Hi bot
 - Hey bot
 - hi
+- Ahoi
+- Alles Rodger?
+- Allo
+- Aloha
+- Bienvendio
+- Ciao
+- Gott zum Gruße
+- Griaß euch
+- Grüß dich
+- Grüß Gott
+- Grüß Sie
+- Grüzi
+- Gruß in die Runde
+- Gruß miteinander
+- Gude
+- Guten Tag
+- Hallo
+- Hallöchen
+- Hallöle
+- Hello
+- Heil
+- Hi
+- High Five
+- Hoi
+- huhu
+- Mahlzeit
+- Mein Lieber / Meine Liebe
+- Moin
+- Moin Moin
+- Moinsen
+- Salut
+- Salute
+- Salve
+- Servus
+- Tach
+- Tach auch
+- Tachen
+- Tag
+- Tagchen
+- Valet
+- Willkommen
 
 ## intent:how_are_you
 - wie gehts dir

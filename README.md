@@ -53,21 +53,29 @@ docker-compose up
 version: '3.0'
 services:
   rasa:
-    image: rasa/rasa:latest
+    image: rasa/rasa:1.4.6
     ports:
       - 80:5005
+    networks: 
+      - app_net
     volumes:
       - ./:/app
     command:
       run 
       --enable-api
-      --endpoints endpoints.yml
       --cors *
     
   action_server:
-    image: rasa/rasa-sdk:latest
+    image: rasa/rasa-sdk:1.4.0    
     volumes:
       - ./actions:/app/actions
+    expose: 
+      - 5055
+    networks: 
+      - app_net
+
+networks: 
+  app_net:
 ```
 
 ### Rasa Azure Docker Container
@@ -106,14 +114,14 @@ CMD [ "run", "--enable-api", "--cors", "*" ]
 version: '3.0'
 services:
   rasa:
-    image: horusrasaregistry.azurecr.io/rasa/rasa:custom
+    image: horusrasaregistry.azurecr.io/rasa/rasa:custom2
     ports:
       - 80:5005
     networks: 
       - app_net
     
   action_server:
-    image: horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom
+    image: horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom2
     expose: 
       - 5055
     networks: 

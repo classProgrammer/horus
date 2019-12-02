@@ -368,6 +368,13 @@
 - aufhören
 - ende
 - abbruch
+- schließen
+- terminieren
+- nicht weitermachen
+- hör auf
+- bleiben lassen
+- lass es bleiben
+- stornieren
 
 ## intent:thanks
 - danke

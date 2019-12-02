@@ -386,9 +386,23 @@
 - perfekt
 - wunderbar
 - danke, du warst ziemlich hilfreich
-
-## synonym:hans wurst
-- Hans Wurst
+- danke dir!
+- danke Ihnen!
+- danke schön
+- danke sehr
+- danke vielmals
+- ich habe zu danken
+- vielen Dank
+- vielen lieben Dank
+- wir haben zu danken
+- besten Dank
+- Gott vergelt's
+- herzlichen Dank
+- lieben Dank
+- man dankt
+- merci
+- verbindlichsten Dank
+- vergelt's Gott
 
 ## regex:dob
 - ^\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)?\d{2})\s*$

@@ -11,7 +11,6 @@ import json
 import re
 
 class SicknessForm(FormAction):
-
     name_pattern = re.compile("^(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) )(([A-Za-zöäüÜÖÄüöäÜÖÄß]{1,}) ?)*$")
 
     def name(self) -> Text:
@@ -72,8 +71,10 @@ class SicknessForm(FormAction):
         return [self.asEventMessage("Person nicht gefunden. Für einen weiteren Versuch bitte Krankmeldung eingeben."), Restarted()]
 
 class RestartAction(Action):
+    
     def name(self):
         return "action_restart" 
 
     def run(self, dispatcher, tracker, domain):
         return [Restarted()]
+

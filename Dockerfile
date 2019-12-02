@@ -1,4 +1,4 @@
-FROM rasa/rasa-sdk:latest
+FROM rasa/rasa-sdk:1.4.0
 
 LABEL maintainer="Spenlingwimer Gerald" version="1.1"
 

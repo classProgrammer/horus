@@ -32,7 +32,6 @@ templates:
   - text: Voll aufgeladen. Wie siehts bei dir aus?
   - text: Wie eine Maschiene
   - text: Als ob ich ein Roboter wäre
-  - text: 
   utter_help:
   - text: OK. Kann ich sonst behilflich sein?
   - text: OK, kann ich sonst mit etwas behilflich sein?

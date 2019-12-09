@@ -34,7 +34,10 @@
 - mega
 - super gut
 - gut
-
+- ganz gut
+- ganz ok
+- toll
+  
 ## intent:decline
 - nein
 - nope
@@ -269,13 +272,13 @@
 - Hallöchen
 - Hallöle
 - Hello
-- Heil
 - Hi
 - High Five
 - Hoi
 - huhu
 - Mahlzeit
-- Mein Lieber / Meine Liebe
+- Mein Lieber
+- Meine Liebe
 - Moin
 - Moin Moin
 - Moinsen
@@ -315,7 +318,6 @@
 - Mir geht es nicht gut
 - Ich fühle mich nicht besonders
 - Mir ist furchtbar übel
-- Ich bin krank
 - Ich bin heute unpässlich
 - Ich habe Kopfschmerzen
 - Ich komme heute nicht
@@ -323,7 +325,6 @@
 - Heute bin ich nicht da
 - Heute bin ich krank
 - Ich kann heute nicht zur Arbeit gehen
-- ich bin krank
 - Hi, ich bin krank. kannst du mir helfen?
 - krankmelden
 - krank
@@ -342,7 +343,6 @@
 - angeschlagen
 - leidend
 - kränklich
-- schlaff
 - bettlägerig
 - unwohl
 - unpässlich

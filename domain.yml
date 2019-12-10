@@ -53,11 +53,11 @@ templates:
   - text: Für die Krankmeldung brauch ich deinen Namen und dein Geburtsdatum im Format
       Vorname Nachname DD.MM.YYYY
   utter_greet:
-  - text: Hallo, ich bin der 3BIT Chatbot, wie kann ich helfen?
-  - text: Guten Tag, ich bin der 3BIT Chatbot, wie kann ich helfen?
+  - text: Hallo, ich bin der 3 Banken IT Chatbot, wie kann ich helfen?
+  - text: Guten Tag, ich bin der 3 Banken IT Chatbot, wie kann ich helfen?
   - text: Hallo, wie kann ich helfen?
-  - text: Ich bin der 3BIT Chatbot, wie kann ich helfen?
-  - text: Ich bin der 3BIT Chatbot, wie darf ich behilflich sein?
+  - text: Ich bin der 3 Banken IT Chatbot, wie kann ich helfen?
+  - text: Ich bin der 3 Banken IT Chatbot, wie darf ich behilflich sein?
   utter_goodbye:
   - text: Guten Tag
   - text: Ich hoffe ich konnte behilflich sein

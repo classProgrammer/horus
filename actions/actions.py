@@ -45,7 +45,7 @@ class SicknessForm(FormAction):
         return {"name": None}
 
     headers = {'Content-type': 'application/json'}
-    url = 'https://resteasy.azurewebsites.net/sick'
+    url = 'https://3-banken-it-webhook.azurewebsites.net/sick'
 
     def submit(
         self,

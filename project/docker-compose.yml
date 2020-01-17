@@ -1,0 +1,26 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:1.4.6
+    ports:
+      - 80:5005
+    networks: 
+      - app_net
+    volumes:
+      - ./:/app
+    command:
+      run 
+      --enable-api
+      --cors *
+    
+  action_server:
+    image: rasa/rasa-sdk:1.4.0    
+    volumes:
+      - ./actions:/app/actions
+    expose: 
+      - 5055
+    networks: 
+      - app_net
+
+networks: 
+  app_net:

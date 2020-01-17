@@ -1,0 +1,18 @@
+version: '3.0'
+services:
+  rasa:
+    image: horusrasaregistry.azurecr.io/rasa/rasa:custom
+    ports:
+      - 80:5005
+    networks: 
+      - app_net
+    
+  action_server:
+    image: horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom
+    expose: 
+      - 5055
+    networks: 
+      - app_net
+
+networks: 
+  app_net:

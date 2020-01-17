@@ -36,25 +36,6 @@
 * fetch_sickness_data{"name":"Franz Bauer"}
     - sickness_form
     - slot{"name":"Franz Bauer"}
-    - slot{"requested_slot":"dob"}
-* fetch_sickness_data{"dob":"24.12.1999"}
-    - sickness_form
-    - slot{"dob":"24.12.1999"}
-    - form{"name":null}
-    - slot{"requested_slot":null}
-
-## Happy 2
-* sickness
-    - sickness_form
-    - form{"name":"sickness_form"}
-    - slot{"requested_slot":"name"}
-* fetch_sickness_data{"dob":"14.05.1984"}
-    - sickness_form
-    - slot{"dob":"14.05.1984"}
-    - slot{"requested_slot":"name"}
-* fetch_sickness_data{"name":"Leif Erikson"}
-    - sickness_form
-    - slot{"name":"Leif Erikson"}
     - form{"name":null}
     - slot{"requested_slot":null}
 
@@ -83,23 +64,7 @@
     - utter_help
     - action_restart
 
-## unhappy 2
-* sickness
-    - sickness_form
-    - form{"name":"sickness_form"}
-    - slot{"requested_slot":"name"}
-* fetch_sickness_data{"name":"Anna Markson"}
-    - sickness_form
-    - slot{"name":"Anna Markson"}
-    - slot{"requested_slot":"dob"}
-* stop
-    - action_deactivate_form
-    - form{"name":null}
-    - utter_stop
-    - utter_help
-    - action_restart
-
-# unhappy 3
+# unhappy 2
 * sickness
     - sickness_form
     - form{"name":"sickness_form"}

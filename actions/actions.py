@@ -18,11 +18,10 @@ class SicknessForm(FormAction):
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
-        return ["name", "dob"]
+        return ["name"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        return { "name": self.from_entity(entity="name"), 
-                 "dob": self.from_entity(entity="dob")}
+        return { "name": self.from_entity(entity="name")}
 
     def asEventMessage(self, message, data = {}):
         return {"event": "bot", "text": message, "data": data}
@@ -37,11 +36,9 @@ class SicknessForm(FormAction):
         print("validation")
 
         value = value.strip()
-        print(value)
         if SicknessForm.name_pattern.match(value):
-            print("OK")
             return {"name": value}
-        print("NOK")
+
         return {"name": None}
 
     headers = {'Content-type': 'application/json'}
@@ -54,10 +51,9 @@ class SicknessForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         name = tracker.current_slot_values()["name"].lower()
-        dob = tracker.current_slot_values()["dob"]
+
         request_data = json.dumps({
-            "name": name,
-            "dob": dob
+            "name": name
         })
         
         try:
@@ -66,7 +62,7 @@ class SicknessForm(FormAction):
             return [self.asEventMessage("Bitte versuchen Sie es später noch einmal. Der Server ist nicht erreichbar. Danke!"), Restarted()]
 
         if (response.ok):
-            return [self.asEventMessage("Gute Besserung " + name.title() + "! Geboren am " + str(dob)), Restarted()]
+            return [self.asEventMessage(f"Gute Besserung {name.title()}!"), Restarted()]
 
         return [self.asEventMessage("Person nicht gefunden. Für einen weiteren Versuch bitte Krankmeldung eingeben."), Restarted()]
 

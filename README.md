@@ -140,3 +140,14 @@ networks:
 
 ## Source of Information
 - [Rasa Documentation](https://rasa.com/docs/)
+
+## Deployment
+```text
+docker build -t horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom .
+
+docker push horusrasaregistry.azurecr.io/rasa/rasa-sdk:custom
+
+docker build -f app.Dockerfile -t horusrasaregistry.azurecr.io/rasa/rasa:custom2 .
+
+docker push horusrasaregistry.azurecr.io/rasa/rasa:custom2
+```

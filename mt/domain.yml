@@ -1,0 +1,71 @@
+session_config:
+  session_expiration_time: 10
+  carry_over_slots_to_new_session: true
+intents:
+- greeting
+- goodbye
+- affirm
+- deny
+- thank_you
+- submit
+- sickness:
+    use_entities: []
+- vacation
+entities:
+- PERSON
+- time
+- DATE
+slots:
+  DATE:
+    type: unfeaturized
+    auto_fill: false
+  PERSON:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
+  return_date:
+    type: unfeaturized
+    auto_fill: false
+  start_date:
+    type: unfeaturized
+    auto_fill: false
+  time:
+    type: unfeaturized
+    auto_fill: false
+responses:
+  utter_greet:
+  - text: Hi, how may I help
+  - text: Hello
+  - text: Hi
+  utter_goodbye:
+  - text: bye
+  - text: have a nice day
+  - text: goodbye
+  utter_ask_PERSON:
+  - text: Please enter the name.
+  utter_ask_time:
+  - text: Please enter the timespan or today.
+  utter_retry_sick:
+  - text: To retry enter sick.
+  utter_aborted:
+  - text: Aborted.
+  utter_thank_you:
+  - text: A pleasure.
+  utter_retry_vaction:
+  - text: To retry enter vacation.
+actions:
+- utter_greet
+- utter_goodbye
+- utter_ask_PERSON
+- utter_ask_time
+- utter_retry_sick
+- utter_retry_vaction
+- utter_aborted
+- utter_thank_you
+- action_submit_sickness_data
+- action_restart
+- action_submit_vacation_data
+forms:
+- sickness_form
+- vacation_form
